@@ -1,24 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header, Container, Divider, Icon } from 'semantic-ui-react';
+import { pullRight, h1 } from './templates.css';
 
-import { pullRight, h1 } from './layout.css';
-
-const Layout = ({ children }) => {
+const Templates = ({ children }) => {
   return (
     <Container>
       <Link to="/">
         <Header as="h1" className={h1}>
-          react-starter-boilerplate-hmr
+          YouTube Searcher
         </Header>
       </Link>
       {children}
       <Divider />
       <p className={pullRight}>
-        Made with <Icon name="heart" color="red" /> by Esau Silva
+        Made with <Icon name="heart" color="black" /> by yagisuke
       </p>
     </Container>
   );
 };
 
-export default Layout;
+export default Templates;
