@@ -1,0 +1,14 @@
+.cSiteName {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #212529;
+}
+
+.cSiteName:hover {
+  text-decoration: none !important;
+}
+
+.cCopyright {
+  display: flex;
+  justify-content: flex-end;
+}
