@@ -1,19 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header, Container, Divider, Icon } from 'semantic-ui-react';
-import { pullRight, h1 } from './templates.css';
+import { cSiteName, cCopyright } from './templates.css';
 
 const Templates = ({ children }) => {
   return (
     <Container>
-      <Link to="/">
-        <Header as="h1" className={h1}>
+      <Link to="/" className={cSiteName}>
+        <Header as='h1'>
           YouTube Searcher
         </Header>
       </Link>
-      {children}
+      <div className='clearfix'>
+        {children}
+      </div>
       <Divider />
-      <p className={pullRight}>
+      <p className={cCopyright}>
         Made with <Icon name="heart" color="black" /> by yagisuke
       </p>
     </Container>

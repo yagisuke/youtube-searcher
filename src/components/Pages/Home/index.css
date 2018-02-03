@@ -1,0 +1,25 @@
+.cSearchBar {
+  margin: 20px;
+  text-align: center;
+}
+
+.cSearchBar input {
+  width: 90%;
+}
+
+.cVideoDetail {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cVideoListItem {
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.cVideoListItem img {
+  max-width: 64px;
+}

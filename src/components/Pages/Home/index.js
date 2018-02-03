@@ -5,7 +5,6 @@ import YTSearch from 'youtube-api-search';
 import { Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import Templates from '../../Templates';
-
 import SearchBar from './search-bar';
 import VideoDetail from './video-detail';
 import VideoList from './video-list';
@@ -21,10 +20,10 @@ class Home extends Component {
       selectedVideo: null
     };
 
-    this.videoSearch('Do As Infinity');
+    this.handleSearchWordChange('TOKYO OLYMPIC 2020');
   }
 
-  videoSearch(term) {
+  handleSearchWordChange(term) {
     YTSearch({ key: API_KEY, term: term }, (videos) => {
       this.setState({
         videos: videos,
@@ -34,16 +33,18 @@ class Home extends Component {
   }
 
   render() {
-    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+    const handleSearchWordChange = _.debounce(searchWord => {
+      this.handleSearchWordChange(searchWord)
+    }, 300);
 
     return (
       <Templates>
         <div>
-          <SearchBar onSearchTermChange={ videoSearch } />
-          <VideoDetail video={ this.state.selectedVideo } />
+          <SearchBar onSearchWordChange={handleSearchWordChange} />
+          <VideoDetail video={this.state.selectedVideo} />
           <VideoList
-            onVideoSelect={selectedVideo => this.setState({ selectedVideo }) }
-            videos={ this.state.videos }
+            onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
+            videos={this.state.videos}
           />
         </div>
       </Templates>
