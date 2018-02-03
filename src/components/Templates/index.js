@@ -11,9 +11,7 @@ const Templates = ({ children }) => {
           YouTube Searcher
         </Header>
       </Link>
-      <div className='clearfix'>
-        {children}
-      </div>
+      {children}
       <Divider />
       <p className={cCopyright}>
         Made with <Icon name="heart" color="black" /> by yagisuke

@@ -39,7 +39,7 @@ class Home extends Component {
 
     return (
       <Templates>
-        <div>
+        <div className='clearfix'>
           <SearchBar onSearchWordChange={handleSearchWordChange} />
           <VideoDetail video={this.state.selectedVideo} />
           <VideoList
