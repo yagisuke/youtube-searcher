@@ -1,8 +1,8 @@
-const commonPaths = require('./common-paths');
+const commonPaths = require('./common-paths')
 
-const webpack = require('webpack');
+const webpack = require('webpack')
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
 const config = {
   entry: {
@@ -44,6 +44,6 @@ const config = {
     hot: true,
     open: true
   }
-};
+}
 
-module.exports = config;
+module.exports = config

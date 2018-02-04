@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import VideoListItem from './video-list-item'
 
 const VideoList = (props) => {
@@ -12,7 +12,7 @@ const VideoList = (props) => {
         />
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default VideoList;
+export default VideoList

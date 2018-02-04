@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react'
 import { cVideoDetail } from './index.css'
 
 const VideoDetail = ({video}) => {
   if (!video) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
-  const videoId = video.id.videoId;
-  const url = `https://www.youtube.com/embed/${videoId}`;
+  const videoId = video.id.videoId
+  const url = `https://www.youtube.com/embed/${videoId}`
 
   return (
-    <div className="video-detail col-md-8">
-      <div className="embed-responsive embed-responsive-16by9">
-        <iframe className="embed-responsive-item" src={url}></iframe>
+    <div className='video-detail col-md-8'>
+      <div className='embed-responsive embed-responsive-16by9'>
+        <iframe className='embed-responsive-item' src={url} />
       </div>
       <div className={cVideoDetail + ' details'}>
         <div>{video.snippet.title}</div>
         <div>{video.snippet.description}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default VideoDetail;
+export default VideoDetail

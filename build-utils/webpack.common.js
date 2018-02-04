@@ -1,7 +1,7 @@
-const commonPaths = require('./common-paths');
+const commonPaths = require('./common-paths')
 
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
   entry: {
@@ -30,6 +30,6 @@ const config = {
       minChunks: Infinity
     })
   ]
-};
+}
 
-module.exports = config;
+module.exports = config
