@@ -1,8 +1,8 @@
-const commonPaths = require('./common-paths');
+const commonPaths = require('./common-paths')
 
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const config = {
   entry: {
@@ -64,6 +64,6 @@ const config = {
       allChunks: true
     })
   ]
-};
+}
 
-module.exports = config;
+module.exports = config
